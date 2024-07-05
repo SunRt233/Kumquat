@@ -1,0 +1,60 @@
+# 忽略所有子项目下的node_modules目录
+*/node_modules/
+node_modules
+# 忽略Yarn生成的.lock文件
+yarn.lock
+
+# 忽略Yarn的缓存目录
+.yarn-cache/
+
+# 忽略Yarn的插件配置
+.yarn-plugins/
+
+# 忽略Yarn的可选依赖
+.yarn/optional/
+
+# 忽略Yarn的本地配置
+.yarnrc*
+
+# 忽略npm相关的文件
+npm-debug.log*
+yarn-error.log*
+
+# 忽略构建或编译的产物
+*/dist/
+*/build/
+*.min.*
+*.map
+
+# 忽略编辑器和IDE的临时文件
+*.swp
+.DS_Store
+.thumbs
+.svn
+.cvs
+.Rhistory
+.history
+.cache
+.backup
+*.bak
+*.old
+*.orig
+*.rej
+.tmp
+_*.*
+
+# 忽略系统特定的临时文件
+.#*
+._*
+~*
+
+# 忽略操作系统特定的文件
+!(*.gitignore)
+!(*.npmignore)
+!(*.eslintignore)
+
+# 忽略测试报告和覆盖率文件
+coverage/
+reports/
+
+.vscode
