@@ -1,0 +1,12 @@
+{
+  "name": "kumquat",
+  "version": "0.0.1",
+  "workspaces": [
+    "./kumquat-peer",
+    "./kumquat-panel"
+  ],
+  "repository": "https://github.com/SunRt233/Kumquat.git",
+  "author": "SunRt233 <2109219866@qq.com>",
+  "license": "GPL-3.0-or-later",
+  "private": true
+}

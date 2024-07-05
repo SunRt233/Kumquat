@@ -1,0 +1,24 @@
+{
+  "name": "kumquat-peer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.10",
+    "@vercel/ncc": "^0.38.1",
+    "@xterm/addon-web-links": "^0.11.0",
+    "commander": "^12.1.0",
+    "express": "^4.19.2",
+    "express-ws": "^5.0.2",
+    "nexe": "^4.0.0-rc.6",
+    "node-pty": "^1.0.0",
+    "pkg": "^5.8.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
