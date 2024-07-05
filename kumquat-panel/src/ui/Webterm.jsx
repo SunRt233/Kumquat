@@ -5,6 +5,7 @@ import { WebglAddon } from '@xterm/addon-webgl'
 import { WebLinksAddon } from '@xterm/addon-web-links'
 import '@xterm/xterm/css/xterm.css' //大坑，css需要单独引入
 import { useEffect, useRef, useState } from 'react';
+import './Webterm.css'
 
 function Webterm() {
     const webtermRef = useRef()
@@ -70,6 +71,10 @@ function Webterm() {
         term.loadAddon(new WebLinksAddon())
         term.open(webtermRef.current)
 
+        Array.from(document.getElementsByClassName('xterm-viewport')).forEach(e => {
+            e.style.overflow = 'hidden'
+        })
+
         fitAddon.fit()
 
         window.onresize = () => {
@@ -92,15 +97,23 @@ function Webterm() {
             term.write(ev.data)
         }
 
+
         hasInited.current = true
 
     },[])
 
-    return <div ref={webtermRef} style={{
+    return <div style={{
+        display: "flex",
         width: "100%",
         height: "100%",
-        overflow: "hidden"
-    }}></div>
+        background: term.options.theme.background,
+    }}>
+        <div ref={webtermRef} style={{
+            width: "100%",
+            height: "100%",
+            overflow: "hidden"
+        }}></div>
+    </div>
 }
 
 export default Webterm

@@ -26,7 +26,7 @@ app.ws('/', (ws, req) => {
                 if (err) {
                     
                 } else {
-                    console.log(`send ok ${data}`)
+                    console.log(`send ok len:${data.length}`)
                     pseudo.write('\x11')
                 }
             })
